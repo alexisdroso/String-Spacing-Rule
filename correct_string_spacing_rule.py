@@ -1,11 +1,11 @@
 nut_length = float(input("Insert nut width in mm : "))
-bass_string_clearance = float(input("Insert bass string clearance in mm : "))
-treble_string_clearance = float(input("Insert treble string clearance in mm : "))
+bass_string_clearance = float(input("Insert outer bass string clearance in mm : "))
+treble_string_clearance = float(input("Insert outer treble string clearance in mm : "))
 nofstrings = int(input("Insert total number of strings : "))
 remaining_length = nut_length - bass_string_clearance - treble_string_clearance
 remaining_length = round(remaining_length,3)
 #remaining_length = round(float(input("Measure space between two outer strings : ")),3)
-adding_factor = float(input("Insert adding factor : "))
+adding_factor = float(input("Insert adding factor : ")) #0.1 is good for guitars, increase a bit for basses
 
 #print("Remaining length in the nut :",remaining_length)
 
