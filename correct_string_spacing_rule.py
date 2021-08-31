@@ -74,7 +74,7 @@ for i in range(ending_point):
 if check == remaining_length :
     print("String spacing is correct")
     
-print("From top to bottom the string spacing is :")
+print("From treble to bass the string spacing is :")
 for i in range(int(ending_point-1)):
     print(str(round(string_spacing_set[index+i],3)) + " mm")
 input()
