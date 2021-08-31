@@ -14,7 +14,7 @@ string_spacing_set = [0]
 
 adding = -1
 i=0
-while(adding<30.00):
+while(adding<100.00):
     adding = round(starting_distance + i * adding_factor,3)
     string_spacing_set.append(adding)
     i+=1
