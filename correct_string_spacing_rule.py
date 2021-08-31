@@ -2,9 +2,7 @@ nut_length = float(input("Insert nut width in mm : "))
 bass_string_clearance = float(input("Insert outer bass string position in mm : "))
 treble_string_clearance = float(input("Insert outer treble string position in mm : "))
 nofstrings = int(input("Insert total number of strings : "))
-remaining_length = nut_length - bass_string_clearance - treble_string_clearance
-remaining_length = round(remaining_length,3)
-#remaining_length = round(float(input("Measure space between two outer strings : ")),3)
+remaining_length = round(nut_length - bass_string_clearance - treble_string_clearance, 3)
 adding_factor = float(input("Insert adding factor : ")) #0.1 is good for guitars, increase a bit for basses
 
 #print("Remaining length in the nut :",remaining_length)
@@ -15,15 +13,14 @@ string_spacing_set = [0]
 adding = -1
 i=0
 while(adding<100.00):
-    adding = round(starting_distance + i * adding_factor,3)
+    adding = round(starting_distance + i * adding_factor, 3)
     string_spacing_set.append(adding)
     i+=1
 
-#print(len(string_spacing_set))    
-#print(string_spacing_set)
+#print(len(string_spacing_set), string_spacing_set)    
 
-slack = (nofstrings-1) * adding_factor
-minimum = round(remaining_length - slack,3)
+margin = (nofstrings-1) * adding_factor
+minimum = round(remaining_length - margin, 3)
 
 index1 = -1
 index2 = -1
@@ -34,7 +31,7 @@ for i in range(1,len(string_spacing_set)-ending_point):
     total = 0
     for j in range(i,i+ending_point):
         total += string_spacing_set[j]
-        total = round(total,3)
+        total = round(total, 3)
         #print(total)
     if (total>=minimum)and(total<remaining_length):
         index1 = i
@@ -42,22 +39,16 @@ for i in range(1,len(string_spacing_set)-ending_point):
         index2 = i
         break
     elif (total>remaining_length):
-        #print("not enough space")
+        #print("total>remaining length")
         break
 
 if (index2>index1) :
     index = index2
 else :
-    #index = index1+1
     index = index1
+    total -= margin
 
-#print(total)
-#print(index)
-#print(string_spacing_set[index])
-total = 0
-for i in range(index,index+ending_point):
-    total += string_spacing_set[i]
-#print(round(total,3))
+#print(total, index, string_spacing_set[index])
 
 if (index != index2) :
     sub = remaining_length - total
@@ -71,9 +62,9 @@ if (index != index2) :
 check = 0
 for i in range(ending_point):
     check += string_spacing_set[index+i]
-#print (check)
-if round(check,3) == remaining_length :
-    print("String spacing is correct")
+check = round(check,3)
+if check == remaining_length :
+    print("\nString spacing is correct\n")
     
 print("From treble to bass the string spacing is :")
 for i in range(int(ending_point-1)):
