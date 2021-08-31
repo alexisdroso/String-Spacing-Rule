@@ -1,6 +1,6 @@
 nut_length = float(input("Insert nut width in mm : "))
-bass_string_clearance = float(input("Insert outer bass string clearance in mm : "))
-treble_string_clearance = float(input("Insert outer treble string clearance in mm : "))
+bass_string_clearance = float(input("Insert outer bass string position in mm : "))
+treble_string_clearance = float(input("Insert outer treble string position in mm : "))
 nofstrings = int(input("Insert total number of strings : "))
 remaining_length = nut_length - bass_string_clearance - treble_string_clearance
 remaining_length = round(remaining_length,3)
