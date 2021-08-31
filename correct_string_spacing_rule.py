@@ -71,7 +71,8 @@ if (index != index2) :
 check = 0
 for i in range(ending_point):
     check += string_spacing_set[index+i]
-if check == remaining_length :
+#print (check)
+if round(check,3) == remaining_length :
     print("String spacing is correct")
     
 print("From treble to bass the string spacing is :")
