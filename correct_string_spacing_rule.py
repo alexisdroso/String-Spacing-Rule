@@ -1,13 +1,13 @@
 nut_length = float(input("Insert nut width in mm : "))
 bass_string_clearance = float(input("Insert bass string clearance in mm : "))
 treble_string_clearance = float(input("Insert treble string clearance in mm : "))
-nofstrings = float(input("Insert total number of strings : "))
+nofstrings = int(input("Insert total number of strings : "))
 remaining_length = nut_length - bass_string_clearance - treble_string_clearance
 remaining_length = round(remaining_length,3)
 #remaining_length = round(float(input("Measure space between two outer strings : ")),3)
 adding_factor = float(input("Insert adding factor : "))
 
-print("Remaining length in the nut :",remaining_length)
+#print("Remaining length in the nut :",remaining_length)
 
 starting_distance = 4.0
 string_spacing_set = [0]
@@ -19,8 +19,7 @@ while(adding<100.00):
     string_spacing_set.append(adding)
     i+=1
 
-#print(len(string_spacing_set))
-    
+#print(len(string_spacing_set))    
 #print(string_spacing_set)
 
 slack = (nofstrings-1) * adding_factor
@@ -29,7 +28,7 @@ minimum = round(remaining_length - slack,3)
 index1 = -1
 index2 = -1
 
-ending_point = int(nofstrings-1)
+ending_point = nofstrings-1
 
 for i in range(1,len(string_spacing_set)-ending_point):
     total = 0
@@ -69,10 +68,13 @@ if (index != index2) :
         string_spacing_set[i] += division
         #print(string_spacing_set[i])
 
-test = 0
-for i in range(int(ending_point)):
-    test += string_spacing_set[index+i]
-print("Total length test:",round(test,3))
+check = 0
+for i in range(ending_point):
+    check += string_spacing_set[index+i]
+if check == remaining_length :
+    print("String spacing is correct")
+    
 print("From top to bottom the string spacing is :")
 for i in range(int(ending_point-1)):
     print(str(round(string_spacing_set[index+i],3)) + " mm")
+input()
