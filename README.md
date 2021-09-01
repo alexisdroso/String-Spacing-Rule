@@ -5,6 +5,6 @@ It is a software version of the string spacing rule like the ones sold from a bu
 
 If you want to read further about the thinking behind such a tool, you can read the excellent explanation in http://www.frets.com/FretsPages/Luthier/Tools/NutRule/nutrule.html. The code is written in python, but there are plans to make a web version too, some time in the future.
 
-If you make a couple of nuts using this tool, please consider making a donation :
+If you make a couple of nuts using this tool, please consider making a donation :  
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=VBJ3FK2AARHYW)
