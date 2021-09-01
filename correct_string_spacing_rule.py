@@ -13,7 +13,7 @@ string_spacing_set = [0]
 
 adding = -1
 i=0
-while(adding<500.00):
+while(adding<remaining_length):
     adding = round(starting_distance + i * adding_factor, 3)
     string_spacing_set.append(adding)
     i+=1
@@ -71,5 +71,4 @@ if check == remaining_length :
         print("From %d string to %d string the distance is : %.3f mm" % (i+1,i+2,string_spacing_set[index+i]))
 else :
     print("Sorry something went wrong")
-    #print(check,remaining_length,total,string_spacing_set[index])
 input()
