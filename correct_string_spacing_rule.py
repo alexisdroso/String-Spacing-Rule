@@ -4,16 +4,16 @@ treble_string_clearance = float(input("Insert outer treble string position in mm
 nofstrings = int(input("Insert total number of strings : "))
 remaining_length = round(nut_length - bass_string_clearance - treble_string_clearance, 3)
 #remaining_length = round(float(input("Insert the distance between the two outer strings : ")), 3)
-adding_factor = float(input("Insert adding factor : ")) #0.1 is good for guitars, increase a bit for basses
+adding_factor = float(input("Insert adding factor : ")) #0.1 is good for guitars, increase a bit for basses / for stewmac rule put 0.1016
 
 #print("Remaining length in the nut :",remaining_length)
 
-starting_distance = 4.0
+starting_distance = 2.0
 string_spacing_set = [0]
 
 adding = -1
 i=0
-while(adding<remaining_length):
+while(adding<remaining_length): #creates sets of consecutive "marks", like the ruler has
     adding = round(starting_distance + i * adding_factor, 3)
     string_spacing_set.append(adding)
     i+=1
