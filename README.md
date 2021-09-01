@@ -7,8 +7,4 @@ If you want to read further about the thinking behind such a tool, you can read 
 
 If you make a couple of nuts using this tool, please consider making a donation :
 
-<form action="https://www.paypal.com/donate" method="post" target="_top">
-<input type="hidden" name="hosted_button_id" value="VBJ3FK2AARHYW" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
-</form>
+https://www.paypal.com/donate?hosted_button_id=VBJ3FK2AARHYW
