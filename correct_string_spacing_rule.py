@@ -67,6 +67,6 @@ check = round(check,3)
 if check == remaining_length :
     print("\nString spacing is correct\n")
     
-for i in range(int(ending_point-1)):
-    print("From %d string to %d string the distance is : %f mm" % (i+1,i+2,round(string_spacing_set[index+i],3)))
+for i in range(ending_point-1):
+    print("From %d string to %d string the distance is : %.3f mm" % (i+1,i+2,string_spacing_set[index+i]))
 input()
