@@ -7,4 +7,4 @@ If you want to read further about the thinking behind such a tool, you can read 
 
 If you make a couple of nuts using this tool, please consider making a donation :
 
-https://www.paypal.com/donate?hosted_button_id=VBJ3FK2AARHYW
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=VBJ3FK2AARHYW)
