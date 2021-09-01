@@ -32,8 +32,8 @@ for i in range(1,len(string_spacing_set)-ending_point):
     total = 0
     for j in range(i,i+ending_point):
         total += string_spacing_set[j]
-        total = round(total, 3)
-        #print(total)
+    total = round(total, 3)
+    #print(total)
     if (total>=minimum)and(total<remaining_length):
         index1 = i
     if (total == remaining_length):
@@ -67,7 +67,6 @@ check = round(check,3)
 if check == remaining_length :
     print("\nString spacing is correct\n")
     
-print("From treble to bass the string spacing is :")
 for i in range(int(ending_point-1)):
-    print(str(round(string_spacing_set[index+i],3)) + " mm")
+    print("From %d string to %d string the distance is : %f mm" % (i+1,i+2,round(string_spacing_set[index+i],3)))
 input()
